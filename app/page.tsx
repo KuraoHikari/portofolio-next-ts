@@ -36,10 +36,13 @@ export default function Home() {
               />
             </h1>
             <p className="max-w-[550px] mb-9 text-white/80">
-              Experienced in <span className="text-yellow-400">JavaScript</span>
-              , <span className="text-blue-700">TypeScript</span>,{" "}
-              <span className="text-accent">Dart</span>, SQL, and{" "}
-              <span className="text-blue-300">Go</span>.
+              Expert in building modern web applications with{" "}
+              <span className="text-yellow-400">JavaScript</span>,{" "}
+              <span className="text-blue-700">TypeScript</span>, and{" "}
+              <span className="text-blue-300">Go</span>. Skilled in{" "}
+              <span className="text-accent">Dart</span> for cross-platform
+              mobile development. Strong foundation in{" "}
+              <span className="text-red-400">SQL</span> for data management.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <a

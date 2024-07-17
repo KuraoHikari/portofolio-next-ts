@@ -95,9 +95,8 @@ const Contact = () => {
               </h3>
               <p>
                 We believe that great things happen when we work together.
-                Whether you're looking for a partner to help you bring your
-                vision to life, or just want to say hi. Let's get started on
-                something amazing together.
+                Whether you're looking for a partner to bring your vision to
+                life, or just want to say hi
               </p>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

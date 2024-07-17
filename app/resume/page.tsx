@@ -32,7 +32,7 @@ import { RiNextjsFill } from "react-icons/ri";
 const about = {
   title: "About me",
   description:
-    "I'm a fullstack developer based in Indonesia. I have a passion for creating beautiful and performant web applications. I'm currently working on my portfolio and am always looking for new challenges.",
+    "I'm a fullstack developer based in Bali, Indonesia. I have a passion for creating beautiful and performant web applications. I'm currently working on my portfolio and am always looking for new challenges. My skills include JavaScript, TypeScript, Dart, SQL, and Go, allowing me to build well-rounded web experiences.",
   info: [
     {
       fieldName: "Name",
@@ -70,7 +70,7 @@ const experience = {
   icon: "/resume/badge.svg",
   title: "Experience",
   description:
-    "I have a passion for creating beautiful and performant web applications. I'm currently working on my portfolio and am always looking for new challenges.",
+    "I am passionate about creating beautiful and performant web applications. I'm currently working on my portfolio, and I'm always looking for new challenges.",
   items: [
     {
       company: "The Lod House Villa",
@@ -94,7 +94,7 @@ const education = {
   icon: "/resume/cap.svg",
   title: "Education",
   description:
-    "I'm a fast learner ,I have big motivation to learn new technologies and my Currenly learning at Primakara University with specialization in Informatics",
+    "I'm a fast learner with a strong motivation to tackle new technologies. Currently, I'm pursuing a specialization in Informatics at Primakara University.",
   items: [
     {
       institution: "Primakara University",
