@@ -4,16 +4,8 @@ const links = [
     href: "/",
   },
   {
-    name: "services",
-    href: "/services",
-  },
-  {
     name: "resume",
     href: "/resume",
-  },
-  {
-    name: "work",
-    href: "/work",
   },
   {
     name: "contact",

@@ -36,7 +36,7 @@ const about = {
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Dewa Gede Indra Putra",
+      fieldValue: "Kurao Hikari",
     },
     {
       fieldName: "Phone",
@@ -51,13 +51,14 @@ const about = {
       fieldValue: "Indonesia",
     },
     {
-      fieldName: "Email",
-      fieldValue: "kuraoindra@gmail.com",
-    },
-    {
       fieldName: "Github",
       fieldValue: "KuraoHikari",
     },
+    {
+      fieldName: "Email",
+      fieldValue: "kuraoindra@gmail.com",
+    },
+
     {
       fieldName: "Languages",
       fieldValue: "Indonesia, English",
@@ -309,15 +310,59 @@ const Resume = () => {
             </TabsContent>
             <TabsContent value="skills" className="w-full h-full">
               <div className="flex flex-col gap-[30px]">
-                <div>
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
                   <h3 className="text-4xl font-semibold">{skills.title}</h3>
                   <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                     {skills.description}
                   </p>
                 </div>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
+                    {skills.items.map((skill) => {
+                      return (
+                        <li key={skill.name}>
+                          <TooltipProvider>
+                            <Tooltip>
+                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
+                                <div className="text-6xl group-hover:text-blue-400 transition-all duration-300">
+                                  {skill.icon}
+                                </div>
+                              </TooltipTrigger>
+                              <TooltipContent>
+                                <p>{skill.name}</p>
+                              </TooltipContent>
+                            </Tooltip>
+                          </TooltipProvider>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value="about">about me</TabsContent>
+            <TabsContent value="about">
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-semibold">{about.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {about.description}
+                  </p>
+                </div>
+                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[650px] mx-auto xl:mx-0">
+                  {about.info.map((info) => {
+                    return (
+                      <li
+                        key={info.fieldName}
+                        className="flex items-center justify-center xl:justify-start gap-4"
+                      >
+                        <span className="text-white/80">{info.fieldName}</span>
+                        <span className="text-xl">{info.fieldValue}</span>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+            </TabsContent>
           </div>
         </Tabs>
       </div>
