@@ -42,14 +42,22 @@ export default function Home() {
               <span className="text-blue-300">Go</span>.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
-              <Button
-                variant="outline"
-                size="lg"
-                className="uppercase flex items-center gap-2"
+              <a
+                href="/cb.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                download="kurao-hikari-cv.pdf"
               >
-                <span>Download CV</span>
-                <Download className="w-5 h-5" />
-              </Button>
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="uppercase flex items-center gap-2"
+                >
+                  <span>Download CV</span>
+                  <Download className="w-5 h-5" />
+                </Button>
+              </a>
+
               <div className="mb-8 xl:mb-0">
                 <Social
                   containerStyles="flex gap-4"
