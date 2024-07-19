@@ -32,12 +32,13 @@ const Stats = () => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://github-readme-stats-tau-topaz-99.vercel.app/api/json-stat?username=KuraoHikari"
+          "https://be-warung-bu-ode.vercel.app/api/json-stat?username=KuraoHikari"
         );
         if (!response.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await response.json();
+        // console.log("🚀 ~ file: Stats.tsx:41 ~ data:", data);
         setGithubData(data);
       } catch (error) {}
     };
@@ -45,7 +46,6 @@ const Stats = () => {
     fetchData();
   }, []);
 
-  console.log("🚀 ~ file: Stats.tsx:6 ~ userData:", userData);
   return (
     <section>
       <div className="container mx-auto">
@@ -80,7 +80,7 @@ const Stats = () => {
               className="text-4xl xl:text-6xl font-extrabold"
             />
             <p className="max-w-[100px] leading-snug to-white/80">
-              Total Stars
+              Total Commits
             </p>
           </div>
           <div className="flex-1 flex gap-4 items-center justify-center">
