@@ -2,9 +2,48 @@
 
 import useGithubStats from "react-github-user-stats";
 import CountUp from "react-countup";
+import { useEffect, useState } from "react";
+
+export interface GithubData {
+  name: string;
+  totalPRs: number;
+  totalPRsMerged: number;
+  mergedPRsPercentage: number;
+  totalReviews: number;
+  totalCommits: number;
+  totalIssues: number;
+  totalStars: number;
+  totalDiscussionsStarted: number;
+  totalDiscussionsAnswered: number;
+  contributedTo: number;
+  rank: Rank;
+}
+
+export interface Rank {
+  level: string;
+  percentile: number;
+}
 
 const Stats = () => {
   const { error, loading, userData } = useGithubStats("KuraoHikari");
+  const [githubData, setGithubData] = useState<GithubData>({} as GithubData);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "https://github-readme-stats-tau-topaz-99.vercel.app/api/json-stat?username=KuraoHikari"
+        );
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        const data = await response.json();
+        setGithubData(data);
+      } catch (error) {}
+    };
+
+    fetchData();
+  }, []);
 
   console.log("🚀 ~ file: Stats.tsx:6 ~ userData:", userData);
   return (
@@ -35,7 +74,7 @@ const Stats = () => {
           </div>
           <div className="flex-1 flex gap-4 items-center justify-center">
             <CountUp
-              end={userData?.total_stars}
+              end={githubData?.totalCommits}
               duration={5}
               delay={2}
               className="text-4xl xl:text-6xl font-extrabold"
